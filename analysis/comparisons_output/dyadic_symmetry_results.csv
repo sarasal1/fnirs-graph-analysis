@@ -1,0 +1,87 @@
+Dyad,Metric,Absolute Difference
+dyad11,Mean Degree,2.222
+dyad11,Mean Clustering Coefficient,0.06
+dyad11,Global Efficiency,0.067
+dyad11,Modularity,0.052
+dyad11,Small-Worldness,0.125
+dyad13,Mean Degree,2.0
+dyad13,Mean Clustering Coefficient,0.083
+dyad13,Global Efficiency,0.05
+dyad13,Modularity,0.116
+dyad13,Small-Worldness,0.074
+dyad19,Mean Degree,5.556
+dyad19,Mean Clustering Coefficient,0.321
+dyad19,Global Efficiency,0.183
+dyad19,Modularity,0.225
+dyad19,Small-Worldness,0.333
+dyad21,Mean Degree,7.778
+dyad21,Mean Clustering Coefficient,0.49
+dyad21,Global Efficiency,0.66
+dyad21,Modularity,0.321
+dyad22,Mean Degree,3.334
+dyad22,Mean Clustering Coefficient,0.053
+dyad22,Global Efficiency,0.3
+dyad22,Modularity,0.055
+dyad24,Mean Degree,8.111
+dyad24,Mean Clustering Coefficient,0.246
+dyad24,Global Efficiency,0.291
+dyad24,Modularity,0.338
+dyad24,Small-Worldness,0.439
+dyad25,Mean Degree,1.667
+dyad25,Mean Clustering Coefficient,0.036
+dyad25,Global Efficiency,0.049
+dyad25,Modularity,0.056
+dyad25,Small-Worldness,0.008
+dyad3,Mean Degree,4.333
+dyad3,Mean Clustering Coefficient,0.285
+dyad3,Global Efficiency,0.142
+dyad3,Modularity,0.191
+dyad3,Small-Worldness,0.254
+dyad31,Mean Degree,2.111
+dyad31,Mean Clustering Coefficient,0.012
+dyad31,Global Efficiency,0.07
+dyad31,Modularity,0.01
+dyad31,Small-Worldness,0.064
+dyad34,Mean Degree,8.556
+dyad34,Mean Clustering Coefficient,0.529
+dyad34,Global Efficiency,0.725
+dyad34,Modularity,0.566
+dyad38,Mean Degree,0.111
+dyad38,Mean Clustering Coefficient,0.058
+dyad38,Global Efficiency,0.058
+dyad38,Modularity,0.027
+dyad39,Mean Degree,3.111
+dyad39,Mean Clustering Coefficient,0.179
+dyad39,Global Efficiency,0.209
+dyad39,Modularity,0.026
+dyad4,Mean Degree,1.0
+dyad4,Mean Clustering Coefficient,0.072
+dyad4,Global Efficiency,0.079
+dyad4,Modularity,0.085
+dyad48,Mean Degree,5.0
+dyad48,Mean Clustering Coefficient,0.126
+dyad48,Global Efficiency,0.178
+dyad48,Modularity,0.232
+dyad48,Small-Worldness,0.219
+dyad5,Mean Degree,1.666
+dyad5,Mean Clustering Coefficient,0.047
+dyad5,Global Efficiency,0.135
+dyad5,Modularity,0.063
+dyad51,Mean Degree,8.555
+dyad51,Mean Clustering Coefficient,0.404
+dyad51,Global Efficiency,0.257
+dyad51,Modularity,0.27
+dyad51,Small-Worldness,0.566
+dyad57,Mean Degree,1.111
+dyad57,Mean Clustering Coefficient,0.151
+dyad57,Global Efficiency,0.091
+dyad57,Modularity,0.057
+dyad58,Mean Degree,3.334
+dyad58,Mean Clustering Coefficient,0.051
+dyad58,Global Efficiency,0.104
+dyad58,Modularity,0.093
+dyad58,Small-Worldness,0.164
+dyad59,Mean Degree,2.667
+dyad59,Mean Clustering Coefficient,0.095
+dyad59,Global Efficiency,0.13
+dyad59,Modularity,0.091

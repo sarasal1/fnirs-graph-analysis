@@ -1,0 +1,87 @@
+Dyad,Metric,Baby,Parent,Higher
+dyad11,Mean Degree,15.889,13.667,baby
+dyad11,Mean Clustering Coefficient,0.869,0.809,baby
+dyad11,Global Efficiency,0.908,0.841,baby
+dyad11,Modularity,0.12,0.172,parent
+dyad11,Small-Worldness,0.735,0.61,baby
+dyad13,Mean Degree,10.333,12.333,parent
+dyad13,Mean Clustering Coefficient,0.626,0.709,parent
+dyad13,Global Efficiency,0.74,0.79,parent
+dyad13,Modularity,0.296,0.18,baby
+dyad13,Small-Worldness,0.406,0.48,parent
+dyad19,Mean Degree,8.0,13.556,parent
+dyad19,Mean Clustering Coefficient,0.482,0.803,parent
+dyad19,Global Efficiency,0.656,0.839,parent
+dyad19,Modularity,0.364,0.139,baby
+dyad19,Small-Worldness,0.272,0.605,parent
+dyad21,Mean Degree,11.0,3.222,baby
+dyad21,Mean Clustering Coefficient,0.703,0.213,baby
+dyad21,Global Efficiency,0.763,0.103,baby
+dyad21,Modularity,0.305,0.626,parent
+dyad22,Mean Degree,10.778,7.444,baby
+dyad22,Mean Clustering Coefficient,0.666,0.613,baby
+dyad22,Global Efficiency,0.751,0.451,baby
+dyad22,Modularity,0.264,0.319,parent
+dyad24,Mean Degree,8.0,16.111,parent
+dyad24,Mean Clustering Coefficient,0.642,0.888,parent
+dyad24,Global Efficiency,0.624,0.915,parent
+dyad24,Modularity,0.444,0.106,baby
+dyad24,Small-Worldness,0.32,0.759,parent
+dyad25,Mean Degree,11.889,10.222,baby
+dyad25,Mean Clustering Coefficient,0.726,0.762,parent
+dyad25,Global Efficiency,0.786,0.737,baby
+dyad25,Modularity,0.236,0.292,parent
+dyad25,Small-Worldness,0.502,0.494,baby
+dyad3,Mean Degree,7.556,11.889,parent
+dyad3,Mean Clustering Coefficient,0.426,0.711,parent
+dyad3,Global Efficiency,0.644,0.786,parent
+dyad3,Modularity,0.391,0.2,baby
+dyad3,Small-Worldness,0.238,0.492,parent
+dyad31,Mean Degree,10.111,12.222,parent
+dyad31,Mean Clustering Coefficient,0.711,0.723,parent
+dyad31,Global Efficiency,0.73,0.8,parent
+dyad31,Modularity,0.251,0.241,baby
+dyad31,Small-Worldness,0.451,0.515,parent
+dyad34,Mean Degree,11.0,2.444,baby
+dyad34,Mean Clustering Coefficient,0.659,0.13,baby
+dyad34,Global Efficiency,0.758,0.033,baby
+dyad34,Modularity,0.273,0.839,parent
+dyad38,Mean Degree,9.889,9.778,baby
+dyad38,Mean Clustering Coefficient,0.565,0.623,parent
+dyad38,Global Efficiency,0.721,0.663,baby
+dyad38,Modularity,0.247,0.274,parent
+dyad39,Mean Degree,12.444,9.333,baby
+dyad39,Mean Clustering Coefficient,0.761,0.582,baby
+dyad39,Global Efficiency,0.807,0.598,baby
+dyad39,Modularity,0.22,0.246,parent
+dyad4,Mean Degree,12.0,11.0,baby
+dyad4,Mean Clustering Coefficient,0.709,0.637,baby
+dyad4,Global Efficiency,0.686,0.765,parent
+dyad4,Modularity,0.17,0.255,parent
+dyad48,Mean Degree,13.444,8.444,baby
+dyad48,Mean Clustering Coefficient,0.745,0.619,baby
+dyad48,Global Efficiency,0.837,0.659,baby
+dyad48,Modularity,0.17,0.402,parent
+dyad48,Small-Worldness,0.561,0.342,baby
+dyad5,Mean Degree,9.333,7.667,baby
+dyad5,Mean Clustering Coefficient,0.572,0.525,baby
+dyad5,Global Efficiency,0.684,0.549,baby
+dyad5,Modularity,0.265,0.328,parent
+dyad51,Mean Degree,18.222,9.667,baby
+dyad51,Mean Clustering Coefficient,0.958,0.554,baby
+dyad51,Global Efficiency,0.977,0.72,baby
+dyad51,Modularity,0.06,0.33,parent
+dyad51,Small-Worldness,0.916,0.35,baby
+dyad57,Mean Degree,8.333,9.444,parent
+dyad57,Mean Clustering Coefficient,0.522,0.673,parent
+dyad57,Global Efficiency,0.614,0.705,parent
+dyad57,Modularity,0.318,0.375,parent
+dyad58,Mean Degree,15.778,12.444,baby
+dyad58,Mean Clustering Coefficient,0.923,0.872,baby
+dyad58,Global Efficiency,0.905,0.801,baby
+dyad58,Modularity,0.087,0.18,parent
+dyad58,Small-Worldness,0.776,0.612,baby
+dyad59,Mean Degree,11.889,9.222,baby
+dyad59,Mean Clustering Coefficient,0.736,0.641,baby
+dyad59,Global Efficiency,0.683,0.553,baby
+dyad59,Modularity,0.163,0.254,parent

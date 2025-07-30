@@ -1,0 +1,7 @@
+Condition,Role,Mean Degree,Mean Clustering Coefficient,Global Efficiency,Modularity,Small-Worldness
+elicit,baby,11.363,0.684,0.751,0.244,0.484
+elicit,perant,10.006,0.636,0.648,0.303,0.508
+free,baby,11.579,0.685,0.761,0.244,0.475
+free,perant,9.889,0.64,0.644,0.322,0.509
+instruct,baby,11.561,0.69,0.765,0.232,0.488
+instruct,perant,9.819,0.633,0.642,0.33,0.497

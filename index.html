@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brain Measures Comparison Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      background: #3f51b5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .section {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .dropdown-box {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .dropdown-box label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select {
+      padding: 6px 10px;
+    }
+
+    .image-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    img {
+      width: 800px;
+      height: auto;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    iframe {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+      height: 600px;
+      margin-top: 30px;
+      background: white;
+    }
+
+    .caption {
+      max-width: 900px;
+      margin: 15px auto;
+      font-size: 16px;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      line-height: 1.5;
+    }
+
+    .caption strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="text-align: center;">
+    <h1>🧠 Brain Measures Comparison Dashboard</h1>
+  </div>
+
+  <div class="section">
+    <div class="dropdown-box">
+      <label for="section-select">Section Type:</label>
+      <select id="section-select" onchange="loadDropdownOptions()">
+        <option value="global_by_condition">Global Measures - By Condition</option>
+        <option value="global_roles">Global Measures - Baby vs Parent</option>
+        <option value="dyadic_symmetry">Global Measures - Dyadic Symmetry</option>
+        <option value="correlation">Global Measures - Correlation Between Metrics</option>
+        <option value="local_dyad">Local Measures - Local Strength Difference</option>
+        <option value="local_condition">Local Measures - Local Strength by Condition</option>
+        <option value="view_global_table">Global Table View</option>
+        <option value="view_local_table">Local Table View</option>
+      </select>
+    </div>
+
+    <div class="dropdown-box">
+      <label for="plot-select">Select Graph:</label>
+      <select id="plot-select" onchange="updateImage()"></select>
+    </div>
+  </div>
+
+  <div class="image-container" id="graph-container">
+    <img id="selected-image" src="" alt="Choose a graph to display" />
+    <div class="caption" id="description"></div>
+    <div class="caption" id="conclusion"></div>
+  </div>
+
+  <div class="image-container" id="iframe-container" style="display: none;">
+    <iframe id="iframe-table"></iframe>
+  </div>
+
+  <script>
+    const plots = {
+      global_by_condition: [
+        "mean_degree_barplot.png",
+        "global_efficiency_barplot.png",
+        "modularity_barplot.png",
+        "small-worldness_barplot.png",
+        "mean_clustering_coefficient_barplot.png"
+      ],
+      global_roles: ["baby_vs_parent_comparison.png"],
+      local_dyad: ["strength_difference_by_node.png"],
+      local_condition: [
+        "strength_by_node_elicit.png",
+        "strength_by_node_free.png",
+        "strength_by_node_instruct.png"
+      ],
+      dyadic_symmetry: ["dyadic_symmetry_avgdiff.png"],
+      correlation: ["metrics_correlation_heatmap.png"]
+    };
+
+    const descriptions = {
+      "strength_difference_by_node.png": "This graph compares the average difference in local node strength (baby minus parent) across all dyads for each node.",
+      "strength_by_node_elicit.png": "Average local node strength across participants under the 'elicit' condition, separated by role (baby vs parent).",
+      "strength_by_node_free.png": "Average node strength under the 'free' condition per participant role.",
+      "strength_by_node_instruct.png": "Average node strength under the 'instruct' condition per participant role.",
+      "mean_degree_barplot.png": "This graph compares the average number of connections (mean degree) across roles and conditions.",
+      "global_efficiency_barplot.png": "Shows global efficiency across the brain network by role and condition.",
+      "modularity_barplot.png": "Indicates how modular the brain network is per group.",
+      "small-worldness_barplot.png": "Reflects small-world characteristics per group and condition.",
+      "mean_clustering_coefficient_barplot.png": "Shows how clustered each brain network is.",
+      "baby_vs_parent_comparison.png": "Compares each metric between baby and parent across dyads.",
+      "dyadic_symmetry_avgdiff.png": "Shows intra-dyad variability in each metric.",
+      "metrics_correlation_heatmap.png": "Displays correlation between all global brain measures."
+    };
+
+    const conclusions = {
+      "strength_difference_by_node.png": "Nodes S7–S9 show higher baby strength; others are balanced.",
+      "strength_by_node_elicit.png": "Babies show higher strength in most nodes during elicit.",
+      "strength_by_node_free.png": "Free condition favors baby connectivity.",
+      "strength_by_node_instruct.png": "Babies lead in instruct condition too.",
+      "mean_degree_barplot.png": "Babies have higher mean degree across all conditions.",
+      "global_efficiency_barplot.png": "Babies slightly outperform in global efficiency.",
+      "modularity_barplot.png": "Parents show higher modularity—more segregated networks.",
+      "small-worldness_barplot.png": "Similar levels of small-worldness between roles.",
+      "mean_clustering_coefficient_barplot.png": "Babies have greater clustering.",
+      "baby_vs_parent_comparison.png": "Babies outperform in most metrics except modularity.",
+      "dyadic_symmetry_avgdiff.png": "Mean Degree varies most between baby and parent.",
+      "metrics_correlation_heatmap.png": "Most metrics are positively correlated, except modularity."
+    };
+
+    function loadDropdownOptions() {
+      const section = document.getElementById("section-select").value;
+      const dropdown = document.getElementById("plot-select");
+      const iframe = document.getElementById("iframe-container");
+      const graph = document.getElementById("graph-container");
+
+      if (section === "view_global_table") {
+        iframe.style.display = "block";
+        graph.style.display = "none";
+        document.getElementById("iframe-table").src = "Scripts/Global_brain_measures_report.html";
+        dropdown.innerHTML = "";
+        return;
+      }
+
+      if (section === "view_local_table") {
+        iframe.style.display = "block";
+        graph.style.display = "none";
+        document.getElementById("iframe-table").src = "Scripts/local_brain_measures_report.html";
+        dropdown.innerHTML = "";
+        return;
+      }
+
+      // show graph UI
+      iframe.style.display = "none";
+      graph.style.display = "block";
+
+      dropdown.innerHTML = "";
+      plots[section].forEach((plot) => {
+        const option = document.createElement("option");
+        option.value = plot;
+        option.textContent = plot;
+        dropdown.appendChild(option);
+      });
+      updateImage();
+    }
+
+    function updateImage() {
+      const selected = document.getElementById("plot-select").value;
+      const section = document.getElementById("section-select").value;
+      const image = document.getElementById("selected-image");
+      const descBox = document.getElementById("description");
+      const concBox = document.getElementById("conclusion");
+
+      let imagePath;
+      if (section === "local_dyad" || section === "local_condition") {
+        imagePath = "Local_Analysis/local_visualizations/" + selected;
+      } else {
+        imagePath = "analysis/visualizations/" + selected;
+      }
+
+      image.src = imagePath;
+      image.alt = "Graph: " + selected;
+
+      image.onerror = function () {
+        image.alt = "❌ Failed to load image: " + imagePath;
+        console.error("Image failed to load:", imagePath);
+      };
+
+      descBox.innerHTML = `<strong>Description:</strong> ${descriptions[selected] || "No description available."}`;
+      concBox.innerHTML = `<strong>Conclusion:</strong> ${conclusions[selected] || "No conclusion available."}`;
+    }
+
+    window.onload = loadDropdownOptions;
+  </script>
+
+</body>
+</html>
